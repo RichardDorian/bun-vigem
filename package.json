@@ -1,0 +1,13 @@
+{
+  "name": "bun-vigem",
+  "module": "src/index.ts",
+  "type": "module",
+  "author": "RichardDorian",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typed-emitter": "^2.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
