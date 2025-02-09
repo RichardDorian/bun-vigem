@@ -10,7 +10,7 @@ bun add https://github.com/RichardDorian/bun-vigem
 
 ## Xbox 360 Controller
 
-## State updates
+### State updates
 
 The library automatically sends a state update to the ViGEm driver at the Xbox 360 controller's update rate (125Hz) (around every 8ms).
 
