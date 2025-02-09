@@ -2,6 +2,7 @@
   "name": "bun-vigem",
   "author": "RichardDorian",
   "module": "src/index.ts",
+  "version": "0.0.1",
   "devDependencies": {
     "@types/bun": "latest",
     "typed-emitter": "^2.1.0"
