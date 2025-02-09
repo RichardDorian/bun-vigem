@@ -1,5 +1,10 @@
 import { dlopen, FFIType, JSCallback } from 'bun:ffi';
+import { platform } from 'node:os';
 import { join } from 'node:path';
+
+if (platform() !== 'win32') {
+  throw new Error('ViGEmClient is only supported on Windows');
+}
 
 const path = join(__dirname, 'ViGEmClient.dll');
 
