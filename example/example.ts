@@ -7,7 +7,6 @@ client.connect();
 const player1 = client.createX360Controller();
 
 player1.connect();
-player1.connect();
 
 setTimeout(() => {
   player1.state.buttons = 0x1000 | 0x4000 | 1024;
