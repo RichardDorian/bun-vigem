@@ -15,8 +15,6 @@ import {
 } from '../ffi';
 
 export abstract class ViGEmTarget {
-  private firstConnect = true;
-
   public constructor(
     protected readonly pointer: Pointer,
     protected readonly client: ViGEmClient
@@ -52,17 +50,6 @@ export abstract class ViGEmTarget {
 
   public connect() {
     const error = vigem_target_add(this.client.pointer, this.pointer);
-
-    console.log(error.toString(16));
-
-    if (
-      this.firstConnect &&
-      error === ViGEmError.VIGEM_ERROR_ALREADY_CONNECTED
-    ) {
-      this.firstConnect = false;
-      this.connect();
-      console.log('second connect');
-    }
 
     switch (error) {
       case ViGEmError.VIGEM_ERROR_NONE:
